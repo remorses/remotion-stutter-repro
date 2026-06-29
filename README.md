@@ -16,3 +16,7 @@ pnpm studio
 ```
 
 Press play and watch the transitions between clips.
+
+## Demo
+
+https://github.com/remorses/remotion-stutter-repro/raw/main/stutter-demo.mp4
