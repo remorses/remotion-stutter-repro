@@ -6,7 +6,7 @@
  * the exact same rendering pattern that stutters in the Remotion player.
  */
 import { useCurrentFrame, useVideoConfig, AbsoluteFill, Img, staticFile } from 'remotion'
-import { Video } from '@remotion/media'
+import { Audio, Video } from '@remotion/media'
 import { interpolate } from 'remotion'
 
 const VIDEO_CLIPS = Array.from({ length: 3 }, (_, i) => {
@@ -32,6 +32,9 @@ export const VideoMontage = () => {
 
   return (
     <AbsoluteFill>
+      {/* Background music */}
+      <Audio src={staticFile('locrian.mp3')} startFrom={65 * 30} volume={0.3} />
+
       {/* Raw frame as blurred background */}
       <AbsoluteFill>
         <Img
