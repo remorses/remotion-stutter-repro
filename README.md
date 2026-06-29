@@ -1,10 +1,12 @@
 # remotion-stutter-repro
 
-Minimal reproduction of frame drops in the Remotion Studio player when cycling between `<Video>` elements.
+Minimal reproduction of frame drops in the Remotion Studio player when transitioning between `<Video>` elements in a `<Series>`.
 
 ## The bug
 
-A composition cycles through 3 looping video clips (switching every 45 frames). Each transition causes a visible stutter/frame drop in the player. Background music plays throughout.
+20 hardcoded `<Series.Sequence>` blocks cycle through 3 video clips (45 frames each). Each transition causes a visible stutter/frame drop in the player. No dynamic logic, no loops, no images; just `<Video>` elements with `objectFit: 'cover'`.
+
+Stutters with both dynamic `src` swapping and static `<Series>` sequences.
 
 ## Setup
 
